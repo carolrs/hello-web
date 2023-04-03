@@ -33,14 +33,14 @@ response for 200 OK
 ```
 # Request:
 ```
-GET /names?names=Julia, Mary, Karim
-curl --location --request GET 'http://localhost:9292/names?names=Joe,Alice,Zoe,Julia,Kieran'
+GET /names?names=Julia,Mary,Karim
+curl --location --request GET 'http://localhost:9292/names?names=Julia,Mary,Karim'
 ```
 # Expected response:
 
 ```
 Response for 200 OK
-#"Julia, Mary, Karim"
+#"Julia,Mary,Karim"
 ```
 # Request:
 ```
