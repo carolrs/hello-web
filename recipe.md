@@ -4,7 +4,7 @@
 
 
 ## 1. Design the Route Signature
-
+```
 get '/names' do
     names = params[:names]
     return names    
@@ -19,7 +19,7 @@ get '/names' do
   http://localhost:9292/sort-names  --data=Joe,Alice,Zoe,Julia,Kieran
   
   http://localhost:9292/names?names=Joe,Alice,Zoe,Julia,Kieran
-  
+  ```
 ## 2. Design the Response
 
 ```
