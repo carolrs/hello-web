@@ -1,0 +1,18 @@
+@startuml
+
+participant "Client" as c #B9E9FC
+participant "Rackup" as r #B9E9FC
+participant "Application Class" as app #B9E9FC
+participant "GET (route block)\n /names" as sort #B9E9FC
+
+c-[#red]>r:"<b>Http Request"
+group #F5F3C1 "Sinatra Application"
+    r-[#red]>app: "<b>Forwards request"
+    app-[#red]->r: "<b>Sends response"
+    r-[#red]>sort: "<b>Sends names"
+    r<-[#red]-sort: "<b>Replies names"
+end
+
+r-[#red]->c: "<b>Http Response"
+
+@enduml

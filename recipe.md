@@ -12,10 +12,10 @@ get '/names' do
 
   post '/sort-names' do
     names = params[:names]
-
     return names.split(",").sort!.join(",")
-    
   end
+
+  
   http://localhost:9292/sort-names  --data=Joe,Alice,Zoe,Julia,Kieran
   
   http://localhost:9292/names?names=Joe,Alice,Zoe,Julia,Kieran
@@ -26,30 +26,30 @@ get '/names' do
 Response for 200 OK
 #"Julia, Mary, Karim"
 
+
 response for 200 OK
 #"Alice,Joe,Julia,Kieran,Zoe"
 
 ```
 # Request:
-
+```
 GET /names?names=Julia, Mary, Karim
 curl --location --request GET 'http://localhost:9292/names?names=Joe,Alice,Zoe,Julia,Kieran'
-
+```
 # Expected response:
 
+```
 Response for 200 OK
 #"Julia, Mary, Karim"
 ```
-
-```
 # Request:
-
+```
 POST /sort-names --data=Joe,Alice,Zoe,Julia,Kieran
 curl --location --request POST 'http://localhost:9292/sort-names' \
 --form 'names="Joe,Alice,Zoe,Julia,Kieran"'
-
+```
 # Expected response:
-
+```
 response for 200 OK
 #"Alice,Joe,Julia,Kieran,Zoe"
 ```
